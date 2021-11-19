@@ -126,7 +126,7 @@ const Details: React.FC = () => {
                 </IonItem>
                 <IonItem>
                     <IonLabel position="stacked">Date (*)</IonLabel>
-                    <IonDatetime value={date} onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
+                    <IonDatetime readonly={true} value={date}/>
                 </IonItem>
                 <IonItem>
                     <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>
