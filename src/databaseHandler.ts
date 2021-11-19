@@ -56,7 +56,6 @@ export async function updateEntry(entryToUpdate:Entry) {
   const ent = await db.transaction("entry").objectStore("entry").get(entryToUpdate.id!) as Entry
   ent.property = entryToUpdate.property
   ent.bedroom = entryToUpdate.bedroom
-  ent.date =entryToUpdate.date
   ent.price = entryToUpdate.price
   ent.furniture = entryToUpdate.furniture
   ent.note = entryToUpdate.note

@@ -67,7 +67,7 @@ import {
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Date (*)</IonLabel>
-            <IonDatetime disabled value={date}/>
+            <IonDatetime readonly={true} value={date}/>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>
