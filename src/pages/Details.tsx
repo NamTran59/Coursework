@@ -23,7 +23,7 @@ const Details: React.FC = () => {
     const [furniture, setFurniture] = useState('')
     const [note, setNotes] = useState('')
     const [reporter, setReporter] = useState('')
-    const [present, dismiss] = useIonToast()
+    const [present] = useIonToast()
     const history = useHistory()
     const [alert] = useIonAlert()
 
