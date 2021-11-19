@@ -47,7 +47,7 @@ const Details: React.FC = () => {
             newEntry.price === entry.price &&
             newEntry.reporter === entry.reporter);
 
-        if (!property || !bedroom || !date || !price || !reporter) {
+        if (!property || !bedroom || !price || !reporter) {
             present("Please enter in the required field", 2000);
         }
 
