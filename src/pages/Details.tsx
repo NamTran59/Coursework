@@ -47,13 +47,14 @@ const Details: React.FC = () => {
             newEntry.price === entry.price &&
             newEntry.reporter === entry.reporter);
 
-        if (!property || !bedroom || !price || !reporter) {
+        if (!property || !bedroom || !date || !price || !reporter) {
             present("Please enter in the required field", 2000);
         }
 
         else if (duplicate.length === 0) {
             updateEntry(newEntry);
             present("Updated", 2000);
+
         } else present("Property already exist", 2000);
     }
 
@@ -66,7 +67,6 @@ const Details: React.FC = () => {
         setFurniture(entry.furniture)
         setNotes(entry.note)
         setReporter(entry.reporter)
-
     }
 
     useEffect(() => {
@@ -126,7 +126,7 @@ const Details: React.FC = () => {
                 </IonItem>
                 <IonItem>
                     <IonLabel position="stacked">Date (*)</IonLabel>
-                    <IonDatetime readonly={true} value={date}/>
+                    <IonDatetime value={date} onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
                 </IonItem>
                 <IonItem>
                     <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>

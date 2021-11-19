@@ -9,7 +9,7 @@ import {
   const AddProperty: React.FC = () => {
     const [property, setProperty] = useState('')
     const [bedroom, setBedroom] = useState('')
-    const [date] = useState(new Date().toISOString())
+    const [date, setDate] = useState(new Date().toISOString())
     const [price, setPrice] = useState('')
     const [furniture, setFurniture] = useState('')
     const [note, setNotes] = useState('')
@@ -28,9 +28,9 @@ import {
         newEntry.price === entry.price &&
         newEntry.reporter === entry.reporter);
   
-      if (!property || !bedroom || !price || !reporter) {
-        present("Please enter in the required field", 2000);
-      } 
+      if (!property || !bedroom || !date || !price || !reporter) {
+            present("Please enter in the required field", 2000);
+        }
   
       else if (duplicate.length === 0) {
         insertEntry(newEntry);
@@ -67,7 +67,7 @@ import {
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Date (*)</IonLabel>
-            <IonDatetime readonly={true} value={date}/>
+            <IonDatetime value={date} onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>
