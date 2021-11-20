@@ -67,7 +67,7 @@ import {
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Date (*)</IonLabel>
-            <IonDatetime value={date} onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
+            <IonDatetime onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
           </IonItem>
           <IonItem>
             <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>
